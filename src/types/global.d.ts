@@ -1,12 +1,21 @@
 export { }
 
-declare global { // create globally accessible types
+declare global {
     type NewQuiz = {
-        quetsion: string,
-        type: string,
+        question: string,
+        type?: string,
         correctAnswer: string,
         explanation?: string,
         options?: Array,
         creator?: string
+    }
+
+    type QuizSet = {
+        topic: string,
+        questions: Array<string>
+    }
+
+    type genAIQuiz = {
+        quiz_set: QuizSet
     }
 }
